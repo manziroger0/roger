@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <title>User Dashboard</title>
+    <style>
+        body{
+            background-image: url("/images/bka.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        a {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+<h2>Welcome to Admin Dashboard</h2>
+<p>Logged as: <span sec:authentication="name"></span></p>
+<p>Has role: <span sec:authentication="authorities"></span></p>
+<p><a th:href="@{/}">Home</a></p>
+<p><a th:href="@{/logout}">Log out</a></p>
+<p><a th:href="@{/view}">view-clients</a></p>
+</body>
+</html>
+
+
+
+
+
